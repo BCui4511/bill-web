@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <main className="App-main">
-        hello world! This is Bill
+        Hello world! This is Bill
         <div className="tip">coming soon...</div>
       </main>
     </div>
