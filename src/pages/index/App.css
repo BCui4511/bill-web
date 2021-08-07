@@ -1,10 +1,19 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  top: 0;
 }
 
+.canvas-background {
+  width: 110vw;
+  height: 100vh;
+  margin-left: -10vw;
+}
 
 .App-main {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,10 +21,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .App-main .tip {
