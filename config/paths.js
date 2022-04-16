@@ -1,4 +1,4 @@
-'use strict';
+
 
 const path = require('path');
 const fs = require('fs');
@@ -24,16 +24,10 @@ const publicUrlOrPath = getPublicUrlOrPath(
 const buildPath = process.env.BUILD_PATH || 'build';
 
 const moduleFileExtensions = [
-  'web.mjs',
-  'mjs',
-  'web.js',
   'js',
-  'web.ts',
   'ts',
-  'web.tsx',
   'tsx',
   'json',
-  'web.jsx',
   'jsx',
 ];
 
@@ -57,13 +51,11 @@ module.exports = {
   appBuild: resolveApp(buildPath),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: resolveModule(resolveApp, 'src/pages/index/index'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
-  yarnLockFile: resolveApp('yarn.lock'),
-  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
