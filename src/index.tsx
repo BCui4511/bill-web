@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Router } from 'react-router-dom';
+import CustomRouter from './modules/Router';
+import { createBrowserHistory } from 'history';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const history = createBrowserHistory({
+  basename: '/'
+});
+
+CustomRouter.initHistory(history);
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <Router history={history}>
+      <App />
+    </Router>
   </React.StrictMode>
 );
 
