@@ -1,0 +1,52 @@
+.list-wrap {
+  margin-top: 40px;
+  height: 368px;
+  font-size: 0;
+  .list-title {
+    width: 300px;
+    height: 368px;
+    position: relative;
+    z-index: 2;
+    .title-img {
+      width: 350px;
+      position: absolute;
+      z-index: 2;
+    }
+    .text {
+      position: relative;
+      top: 132px;
+      left: 220px;
+      font-family: ysBlack;
+      font-size: 40px;
+      display: inline-block;
+      width: 80px;
+      color: #6371f1;
+    }
+  }
+
+  .card-list {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    top: -369px;
+    padding: 20px 0 20px 300px;
+    .card-item {
+      list-style-type: none;
+      flex: 0 0 auto;
+      width: 300px;
+      height: 328px;
+      margin-left: 40px;
+      background-color: #fefefe;
+      border-radius: 20px;
+      background: #f2f2f2;
+      box-shadow: 6px 6px 12px #bdbdbd, -6px -6px 12px #ffffff;
+    }
+    .card-item:hover {
+      background: linear-gradient(145deg, #dadada, #ffffff);
+    }
+  }
+
+  .card-list::-webkit-scrollbar {
+    display: none;
+  }
+}

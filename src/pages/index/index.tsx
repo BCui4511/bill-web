@@ -1,23 +1,13 @@
 import * as React from 'react';
 import './index.scss';
 
-import { TAGS } from './utils/const';
+import { TYPE_ENUM } from '../../utils/types';
+// import { TAGS } from './utils/const';
+import List from '../../components/List';
 
 export default class indexPage extends React.Component {
   renderHeader() {
-    return (
-      <header className="header-wrap">
-        <div className="top-tip">
-          {TAGS.map((item) => {
-            return (
-              <span className="tag" key={item}>
-                #{item}
-              </span>
-            );
-          })}
-        </div>
-      </header>
-    );
+    return <header className="header-wrap"></header>;
   }
   renderNameHeader() {
     return (
@@ -27,11 +17,24 @@ export default class indexPage extends React.Component {
       </div>
     );
   }
+
+  renderList() {
+    return (
+      <>
+        <List type={TYPE_ENUM.new} />
+        <List type={TYPE_ENUM.tech} />
+        <List type={TYPE_ENUM.life} />
+        <List type={TYPE_ENUM.camera} />
+      </>
+    );
+  }
+
   render() {
     return (
       <div className="index-page">
         {this.renderHeader()}
         {this.renderNameHeader()}
+        {this.renderList()}
       </div>
     );
   }

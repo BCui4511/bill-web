@@ -19,6 +19,8 @@
     overflow: hidden;
     border-radius: 20px;
     border: none;
+    z-index: 999;
+    box-shadow: 10px 10px 20px #bdbdbd;
 
     span {
       position: relative;
@@ -65,39 +67,6 @@
   .name-tag:hover .liquid {
     top: -95px;
   }
-
-  .top-tip {
-    font-family: Arial;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
-    background-size: 800% 400%;
-    display: inline-block;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    color: white;
-    transition: all 0.5s ease-in-out;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.top-tip:hover {
-  animation: gradient 5s infinite;
 }
 
 @keyframes animate {
