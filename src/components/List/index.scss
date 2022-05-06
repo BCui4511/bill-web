@@ -2,20 +2,24 @@
   margin-top: 20px;
   height: 388px;
   font-size: 0;
+  position: relative;
+  width: 100%;
   .list-title {
     width: 300px;
     height: 388px;
     position: relative;
     z-index: 2;
+    background-image: linear-gradient(to right, #f2f2f2 70%, #f2f2f2b5 85%, #f2f2f200 100%);
     .title-img {
       width: 350px;
       position: absolute;
       z-index: 2;
+      left: 10px;
     }
     .text {
       position: relative;
       top: 132px;
-      left: 220px;
+      left: 225px;
       font-family: ysBlack;
       font-size: 40px;
       display: inline-block;
@@ -24,12 +28,46 @@
     }
   }
 
+  .img-1 {
+    .title-img {
+      width: 300px;
+      top: 90px;
+      left: -3px;
+      filter: drop-shadow(0 0 5px #d7d7d7);
+    }
+    .text {
+      color: #268aff;
+    }
+  }
+
+  .img-2 {
+    .title-img {
+      left: 60px;
+      top: 20px;
+    }
+    .text {
+      color: #f8550d;
+    }
+  }
+
+  .img-3 {
+    .title-img {
+      width: 230px;
+      left: 15px;
+      top: 100px;
+      filter: drop-shadow(0 0 5px #d7d7d7);
+    }
+    .text {
+      color: #fd9a28;
+    }
+  }
+
   .card-list {
     display: flex;
     overflow-x: auto;
     position: relative;
     top: -388px;
-    padding: 30px 0 30px 300px;
+    padding: 30px 40px 30px 300px;
   }
 
   .card-list::-webkit-scrollbar {
