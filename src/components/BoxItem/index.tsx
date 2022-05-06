@@ -8,7 +8,7 @@ interface BoxItemProps {
   id: number;
 }
 
-export function BoxItem(props: BoxItemProps) {
+export default function BoxItem(props: BoxItemProps) {
   return (
     <li className={`box-item type-${props.type}`}>
       <title className="title">{props.title}</title>
