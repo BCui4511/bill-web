@@ -2,7 +2,7 @@ import * as React from 'react';
 import './index.scss';
 
 import { TYPE_ENUM } from '../../utils/types';
-// import { TAGS } from './utils/const';
+import Footer from '../../components/Footer';
 import List from '../../components/List';
 
 export default class indexPage extends React.Component {
@@ -35,6 +35,7 @@ export default class indexPage extends React.Component {
         {this.renderHeader()}
         {this.renderNameHeader()}
         {this.renderList()}
+        <Footer />
       </div>
     );
   }
